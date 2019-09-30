@@ -11,15 +11,30 @@ class App extends React.Component {
     super();
 
     this.state = {
-
+      todos: [{
+        id: 1,
+        name: "Write Code"
+      },
+      {
+        id: 2,
+        name: "Stand Up"
+      },
+      {
+        id: 3,
+        name: "Sleep"
+      }]
     }
+  }
+
+  handleFormInput = () => {
+    console.log("form got submitted");
   }
 
   render() {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <TodoList />
+        <TodoList todos={this.state.todos}/>
         <TodoForm />
       </div>
     );
