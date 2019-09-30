@@ -11,18 +11,7 @@ class App extends React.Component {
     super();
 
     this.state = {
-      todos: [{
-        id: 1,
-        name: "Write Code"
-      },
-      {
-        id: 2,
-        name: "Stand Up"
-      },
-      {
-        id: 3,
-        name: "Sleep"
-      }]
+      todos: []
     }
   }
 
