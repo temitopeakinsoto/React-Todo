@@ -11,13 +11,22 @@ class App extends React.Component {
     super();
 
     this.state = {
-      todos: []
+      todos: [],
+      userTodoInput: ''
     }
   }
 
-  handleFormInput = () => {
-    console.log("form got submitted");
-  }
+   handleInputChange = event => {
+        console.log('event is', event.target.value);
+        this.setState({
+            userTodoInput: event.target.value
+        })
+    }
+
+    handleClick = event => {
+        event.preventDefault();
+        console.log("I got triggered");
+    }
 
   render() {
     return (
